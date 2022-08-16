@@ -29,11 +29,32 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  # icons
+  cupertino_icons: ^1.0.3
+  # auto_route
+  auto_route: ^3.2.0
+  # immutable_classes
+  freezed: ^0.15.0+1
+  freezed_annotation: ^0.15.0
+  # serialization
+  json_serializable: ^6.1.3
+  json_annotation: ^4.4.0
+  # http client
+  http: ^0.13.4
+  dio: ^4.0.0
+  retrofit: ^3.0.0
+  pretty_dio_logger: ^1.1.1
+  # dependency injection
+  get_it: ^7.2.0
+  injectable: ^1.5.0
+  injectable_generator: ^1.5.2
+  # functional programming
+  dartz: ^0.10.0
+  # business logic
+  flutter_bloc: ^8.0.1
 
+  equatable: ^2.0.3
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:
