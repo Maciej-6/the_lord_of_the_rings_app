@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:the_lord_of_the_rings_app/data/models/docs_model.dart';
+import 'package:the_lord_of_the_rings_app/domain/entity/api/book.dart';
 
 class BookModel extends Equatable {
 

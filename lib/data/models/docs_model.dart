@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:the_lord_of_the_rings_app/domain/entity/api/docs.dart';
 
 class DocsModel extends Equatable{
 
