@@ -1,18 +1,28 @@
-import 'package:equatable/equatable.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-class Docs extends Equatable {
+part 'docs.freezed.dart';
 
-  String? id;
-  String? name;
-
-  Docs({
-    required this.id,
-    required this.name,
-  });
-
-  @override
-  List<Object?> get props => [
-    id,
-    name,
-  ];
+@Freezed()
+class Docs with _$Docs {
+  const factory Docs({
+    required String id,
+    required String name,
+  }) = _Docs;
 }
+
+// class Docs extends Equatable {
+//
+//   String? id;
+//   String? name;
+//
+//   Docs({
+//     required this.id,
+//     required this.name,
+//   });
+//
+//   @override
+//   List<Object?> get props => [
+//     id,
+//     name,
+//   ];
+// }

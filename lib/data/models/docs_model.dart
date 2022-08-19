@@ -1,34 +1,47 @@
-import 'package:equatable/equatable.dart';
-import 'package:the_lord_of_the_rings_app/domain/entity/api/docs.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-class DocsModel extends Equatable{
+part 'docs_model.freezed.dart';
 
-  String? id;
-  String? name;
+part 'docs_model.g.dart';
 
-  DocsModel({
-    required this.id,
-    required this.name,
-  });
+@Freezed()
+class DocsModel with _$DocsModel {
+  const factory DocsModel({
+    required String id,
+    required String name,
+  }) = _DocsModel;
 
-  factory DocsModel.fromJson(Map<String, dynamic> json) => DocsModel(
-    id: json["id"],
-    name: json["name"],
-  );
-
-  Map<String, dynamic> toJson() => {
-    "id": id,
-    "name": name,
-  };
-
-  Docs toEntity() => Docs(
-    id: id,
-    name: name,
-  );
-
-  @override
-  List<Object?> get props => [
-    id,
-    name,
-  ];
+  factory DocsModel.fromJson(Map<String, dynamic> json) => _$DocsModelFromJson(json);
 }
+
+// class DocsModel extends Equatable{
+//
+//   String? id;
+//   String? name;
+//
+//   DocsModel({
+//     required this.id,
+//     required this.name,
+//   });
+//
+//   factory DocsModel.fromJson(Map<String, dynamic> json) => DocsModel(
+//     id: json["id"],
+//     name: json["name"],
+//   );
+//
+//   Map<String, dynamic> toJson() => {
+//     "id": id,
+//     "name": name,
+//   };
+//
+//   Docs toEntity() => Docs(
+//     id: id,
+//     name: name,
+//   );
+//
+//   @override
+//   List<Object?> get props => [
+//     id,
+//     name,
+//   ];
+// }
